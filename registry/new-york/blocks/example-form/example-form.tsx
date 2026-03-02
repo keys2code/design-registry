@@ -162,3 +162,5 @@ export function ExampleForm() {
     </form>
   )
 }
+
+export default ExampleForm
