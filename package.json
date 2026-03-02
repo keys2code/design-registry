@@ -2,6 +2,10 @@
   "name": "registry",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.24.0",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "pnpm registry:build && next build",
