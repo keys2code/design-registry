@@ -18,6 +18,24 @@ This is a template for creating a custom registry using Next.js.
 - Every registry item are compatible with the `shadcn` CLI.
 - We have also added v0 integration using the `Open in v0` api.
 
+## Storybook
+
+This project includes Storybook for component documentation. Stories are available for all UI primitives in `registry/new-york/ui/`:
+
+- **Button** – All variants (default, destructive, outline, ghost, etc.) and sizes
+- **Input** – Default, with label, disabled, invalid states
+- **Label** – Standalone and with form controls
+- **Card** – Default, compact, and form card examples
+- **Textarea** – Default, with label, disabled, invalid states
+
+Run Storybook:
+
+```bash
+pnpm storybook
+```
+
+This project uses `@storybook/nextjs-vite` (Storybook 10) with Vite for compatibility with Next.js 15.
+
 ## Documentation
 
 Visit the [shadcn documentation](https://ui.shadcn.com/docs/registry) to view the full documentation.

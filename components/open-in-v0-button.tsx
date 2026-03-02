@@ -13,13 +13,14 @@ export function OpenInV0Button({
         "shadow-none bg-black text-white hover:bg-black hover:text-white dark:bg-white dark:text-black",
         className
       )}
-      asChild
+      render={
+        <a
+          href={`https://v0.dev/chat/api/open?url=${encodeURIComponent(`${process.env.NEXT_PUBLIC_BASE_URL}/r/${name}.json`)}`}
+          target="_blank"
+          rel="noreferrer"
+        />
+      }
     >
-      <a
-        href={`https://v0.dev/chat/api/open?url=${process.env.NEXT_PUBLIC_BASE_URL}/r/${name}.json`}
-        target="_blank"
-        rel="noreferrer"
-      >
         Open in{" "}
         <svg
           viewBox="0 0 40 20"
@@ -36,7 +37,6 @@ export function OpenInV0Button({
             fill="currentColor"
           ></path>
         </svg>
-      </a>
     </Button>
   )
 }
