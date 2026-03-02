@@ -5,7 +5,6 @@ export function OpenInV0Button({
   name,
   className,
 }: { name: string } & React.ComponentProps<typeof Button>) {
-  const registryUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/r/${name}.json`
   return (
     <Button
       aria-label="Open in v0"
@@ -17,7 +16,7 @@ export function OpenInV0Button({
       asChild
     >
       <a
-        href={`https://v0.dev/chat/api/open?url=${encodeURIComponent(registryUrl)}`}
+        href={`https://v0.dev/chat/api/open?url=${process.env.NEXT_PUBLIC_BASE_URL}/r/${name}.json`}
         target="_blank"
         rel="noreferrer"
       >
